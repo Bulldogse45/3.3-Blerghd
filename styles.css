@@ -13,34 +13,66 @@ body {
   margin: 0;
   font-family: Helvetica;
 }
-.post {
+.post__header::after {
+
 }
 .post__header {
-  position: fixed;
+  float:left;
   top: 0;
   bottom: 0;
-  width: 50%;
+  width: 46%;
   height:100%;
+  background-color: Crimson;
+  padding-left: 4%;
   background-image: url("img/stargate-background.jpg");
   background-size: cover;
   color: #FFF;
+  min-height: 1000px;
 }
-.post__header *{
-  display:inline-block;
+.post__header div img{
+  display:inline;
+  height:40px;
+
 }
 
 .post__header div{
-  font-family: fantasy;
-  float:left;
+  font-family: 'Gotham A';
+  font-weight: lighter;
+  margin-top: 20px;
+  vertical-align: middle;
 }
+
+.post__header h1{
+  font-family: 'Gotham A';
+  font-size: 48px;
+  font-weight: lighter;
+
+}
+
 .post__header nav{
-  float:right;
+  margin-top:20px;
+
+}
+.post__header nav ul{
+    display: inline-block;
+}
+.line{
+  border-top: 3px #c0c0c0 solid;
+  width:35%;
+  display: inline-block;
+  margin-left:5%;
+}
+
+.post__header nav li a{
+  font-family: 'Gotham A';
+  font-size: 12px;
 }
 .post__headerNav {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: fantasy;
+  font-family: 'Gotham A';
+  font-size: 13px;
 }
 .post__headerNav > li {
   display: inline-block;
@@ -56,15 +88,21 @@ body {
   text-decoration: none;
 }
 .post__content {
-  width: 50%;
-  margin-left: 50%;
-  min-height: 200px;
+  float:right;
+  width: 45%;
+  margin-right:2.5%;
+  margin-left:2.5%;
+  min-height: 1000px;
   padding: 40px;
   line-height: 27px;
   color: #6D6D6D;
+  margin-top:105px;
+  border-top:3px solid #c0c0c0;
 }
 .post__content p {
   font-size:12px;
   font-family: Gotham, Arial, sans-serif;
-
+}
+.post__content p.last-of-type::after {
+  content: url("biohazard.png");
 }
