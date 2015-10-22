@@ -8,31 +8,38 @@
 html,
 body {
   font-size: 18px;
+  height:100%;
+
 }
 body {
   margin: 0;
   font-family: Helvetica;
+  height: 100%;
 }
-.post__header::after {
-
+.post, .main{
+  height:100%;
+  position: relative;
+  overflow: hidden;
 }
 .post__header {
   float:left;
+  position: absolute;
   top: 0;
   bottom: 0;
-  width: 46%;
+  width: 49%;
   height:100%;
-  background-color: Crimson;
   padding-left: 4%;
   background-image: url("img/stargate-background.jpg");
   background-size: cover;
   color: #FFF;
-  min-height: 1000px;
 }
 .post__header div img{
   display:inline;
   height:40px;
 
+}
+.post__header div span{
+  vertical-align: super;
 }
 
 .post__header div{
@@ -92,8 +99,6 @@ body {
   width: 45%;
   margin-right:2.5%;
   margin-left:2.5%;
-  min-height: 1000px;
-  padding: 40px;
   line-height: 27px;
   color: #6D6D6D;
   margin-top:105px;
@@ -103,6 +108,24 @@ body {
   font-size:12px;
   font-family: Gotham, Arial, sans-serif;
 }
-.post__content p.last-of-type::after {
-  content: url("biohazard.png");
+.post__content:last-child::after {
+  content: url("https://upload.wikimedia.org/wikipedia/en/1/16/The_Cranberries_-_Zombie.jpg");
+
+}
+
+@media (max-width: 600px) {
+  .post__header {
+    width:100%;
+    height:20px;
+    min-height: 400px;
+  }
+  .post__content{
+    width:100%;
+    margin:0;
+    margin-top: 400px;
+    padding:0 25px;
+    border:0;
+    clear: both;
+  }
+
 }
